@@ -1,12 +1,12 @@
-import { ItemsModel } from '../model/items_model';
-import { BagModel } from '../model/bag_model';
-import { OrdersModel } from '../model/orders_model';
-import { UserModel } from '../model/user_model';
-import { ItemsView } from '../view/items_view';
-import { BagPreviewView } from '../view/bag-preview.view';
-import { OrdersPreviewView } from '../view/orders-preview.view';
-import { LocalStorage } from '../local-storage/local-storage';
-import { Storage } from '../firebase/firebase';
+import { ItemsModel } from '../model/items_model.js';
+import { BagModel } from '../model/bag_model.js';
+import { OrdersModel } from '../model/orders_model.js';
+import { UserModel } from '../model/user_model.js';
+import { ItemsView } from '../view/items_view.js';
+import { BagPreviewView } from '../view/bag-preview.view.js';
+import { OrdersPreviewView } from '../view/orders-preview.view.js';
+import { LocalStorage } from '../local-storage/local-storage.js';
+import { Storage } from '../firebase/firebase.js';
 
 export class ItemsController {
 	constructor() {
@@ -59,7 +59,7 @@ export class ItemsController {
 			if (basket.includes(id)) return;
 
 			this.bagModel.set(item);
-			
+
 			basket.push(id);
 			this.localStorage.set(basket);
 
